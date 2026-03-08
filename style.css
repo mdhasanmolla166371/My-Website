@@ -381,6 +381,8 @@ header{
    max-width: 1100px;
    margin: 0 auto;
    padding-top: 40px;
+   margin-bottom: 30px;
+
 }
 
 .img-grid{
@@ -390,6 +392,7 @@ header{
    border-radius: 20px;
    overflow: hidden;
    transition: .3s;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.137);
 }
 
 .img-grid:hover {
@@ -530,4 +533,19 @@ header{
 
 .useful-links a:hover, .others-link a:hover{
    transform: scale(1.2);
+}
+
+.copyright{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 30px;
+}
+.copyright p{
+   border-top: 2px solid;
+   width: 85%;
+   text-align: center;
+   margin-top: 5px;
+   color: rgba(255, 255, 255, 0.568);
 }
