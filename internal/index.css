@@ -1,0 +1,129 @@
+ /* =========================================
+   ১. বেসিক রিসেট এবং বডি স্টাইল
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SolaimanLipi', 'Segoe UI', Tahoma, sans-serif; /* বাংলা ফন্ট */
+    background-color: #f4f7f6; /* চোখের জন্য আরামদায়ক ব্যাকগ্রাউন্ড */
+    padding: 40px;
+    color: #333;
+}
+
+/* =========================================
+   ২. ট্রি কন্টেইনার (মেইন বক্স)
+   ========================================= */
+.tree {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+}
+
+/* =========================================
+   ৩. লাইন এবং কানেকশন (Vertical Logic)
+   ========================================= */
+
+.tree ul {
+    list-style-type: none;
+    position: relative;
+    padding-left: 20px; /* বামে ইন্ডেন্টেশন */
+}
+
+/* প্রতিটি সদস্যের জন্য জায়গা এবং রিলেটিভ পজিশন */
+.tree li {
+    position: relative;
+    padding-left: 25px; /* লাইনের থেকে নামের দূরত্ব */
+    margin-bottom: 5px;
+}
+
+/* উল্লম্ব দাগ (Vertical Line - উপর থেকে নিচে) */
+.tree li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 2px solid #555; /* দাগের রং এবং সাইজ */
+    height: 100%; /* পুরো হাইট জুড়ে দাগ থাকবে */
+}
+
+/* অনুভূমিক দাগ (Horizontal Line - বাম থেকে ডানে নামের দিকে) */
+.tree li::after {
+    content: '';
+    position: absolute;
+    top: 22px; /* বক্সের মাঝ বরাবর পজিশন */
+    left: 0;
+    border-top: 2px solid #555; /* দাগের রং */
+    width: 25px; /* দাগের দৈর্ঘ্য */
+}
+
+/* শেষ সন্তানের দাগ ফিক্স করা (L শেপ তৈরি করা) */
+.tree li:last-child::before {
+    height: 23px; /* দাগটি নামের মাঝখানে এসে থেমে যাবে */
+}
+
+/* =========================================
+   ৪. নামের বক্স ডিজাইন (Gorgeous Look)
+   ========================================= */
+.tree .node {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50px; /* ক্যাপসুল স্টাইল */
+    
+    /* ব্যাকগ্রাউন্ড এবং টেক্সট */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* সুন্দর বেগুনি-নীল গ্রেডিয়েন্ট */
+    color: #fff;
+    border: 2px solid #fff;
+    
+    /* শ্যাডো বা ছায়া */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-width: 120px;
+    text-align: center;
+}
+
+/* হোভার এফেক্ট (মাউস নিলে যা হবে) */
+.tree .node:hover {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); /* মাউস নিলে পিংক কালার হবে */
+    color: #333; /* টেক্সট কালো হবে */
+    transform: translateX(10px); /* একটু ডানে সরে যাবে */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* =========================================
+   ৫. রুট বা প্রধান দাদা (Root Node Fixes)
+   ========================================= */
+
+/* একদম প্রথম লিস্ট আইটেমের দাগগুলো মুছে ফেলা */
+.tree > ul > li::before,
+.tree > ul > li::after {
+    display: none;
+}
+
+.tree > ul > li {
+    padding-left: 0;
+}
+
+/* প্রধান দাদার ডিজাইন স্পেশাল করা */
+.tree > ul > li > .node {
+    font-size: 20px;
+    padding: 15px 40px;
+    background: linear-gradient(to right, #ff512f, #dd2476); /* লাল-গোলাপি */
+    margin-bottom: 20px;
+    display: block; /* পুরো জায়গা নিবে */
+    width: fit-content;
+    margin-left: auto; /* মাঝখানে আনার জন্য optional */
+    margin-right: auto;
+}

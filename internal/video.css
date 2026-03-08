@@ -1,0 +1,86 @@
+#video-btn{
+    display: flex;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 40px;
+    justify-content: center;
+}
+
+
+#video-btn a{
+    text-decoration: none;
+    color: aliceblue;
+    background: linear-gradient(to bottom right, rgba(0, 0, 255, 0.669), rgba(0, 128, 0, 0.642));
+    width: 100px;
+    height: auto;
+    text-align: center;
+    padding: 14px;
+    border-radius: 0px 13px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.256);
+    transition: .6s;
+}
+
+
+#video-btn a:hover{
+    background-color: rgb(3, 35, 238);
+}
+
+.all-video a{
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 4px 10px;
+    
+    border-radius: 6px;
+    color: rgba(0, 0, 0, 0.486);
+    transition: .3s;
+}
+
+.all-video a:hover{
+    color: rgba(77, 30, 229, 0.833);
+    text-decoration: underline;
+    background-color: #87868657;
+}
+
+
+#vlog{
+    display: grid;                        /* make a grid layout */
+    grid-template-columns: repeat(3, 1fr);/* 3 equal columns */
+    gap: 16px;                            /* space between grid cells */
+    grid-auto-rows: auto;                 /* row height based on content */
+    max-width: 1000px;                    /* keep container from getting too wide */
+    margin: 24px auto;                    /* center horizontally + vertical gap */
+    padding:  16px;                      /* small horizontal breathing room on small screens */
+    box-sizing: border-box;               /* include padding in width calculation */
+    align-items: start; 
+}
+#vlog video {
+    width: 100%;                          /* fill the grid cell width */
+    object-fit: contain;                  /* show whole frame (no crop), letterboxed if necessary */
+    background: #b81616;                     /* black background for letterbox bars */
+    border-radius: 8px;                   /* rounded corners */
+    overflow: hidden;                     /* clip rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.212); /* subtle elevation */
+    }
+
+
+ #videography{
+    display: grid;                        /* make a grid layout */
+    grid-template-columns: repeat(3, 1fr);/* 3 equal columns */
+    gap: 16px;                            /* space between grid cells */
+    grid-auto-rows: auto;                 /* row height based on content */
+    max-width: 1200px;                    /* keep container from getting too wide */
+    margin: 24px auto;                    /* center horizontally + vertical gap */
+    padding:  16px;                      /* small horizontal breathing room on small screens */
+    box-sizing: border-box;               /* include padding in width calculation */
+    align-items: start; 
+}
+#videography video {
+    display: block;                       /* remove inline gap & make block-level */
+    width: 100%;                          /* fill the grid cell width */
+    aspect-ratio: 16/9;                   /* keep consistent 16:9 box (change if needed) */
+    object-fit: contain;                  /* show whole frame (no crop), letterboxed if necessary */                    /* black background for letterbox bars */
+    border-radius: 8px;                   /* rounded corners */
+    overflow: hidden;                     /* clip rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.45); /* subtle elevation */
+    }
+   

@@ -1,0 +1,49 @@
+.contact{
+    width: fit-content;
+    font-size:22px;
+    text-align: center;
+    background-color: bisque;
+    padding: 15px 60px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 3px rgba(23, 13, 7, 0.393);
+    margin: 0 auto; 
+    margin-top: 30px;
+    
+     
+}
+.h1{ 
+    font-size: 50px;
+    width: fit-content;
+    background-color: #0af5f5;
+    border-radius: 18px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.634);
+    padding: 2px 28px ;
+    margin: 0 auto; 
+    
+}
+.contact img{
+    height: 30px;
+    width: 30px;
+     border-radius: 20px;
+    object-fit: cover;
+    overflow: hidden;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    margin-bottom: -29.5px;
+
+}
+.pn{
+    text-decoration:underline;
+    padding-bottom: 3px;
+
+}
+.email{
+    text-decoration:underline;
+    padding-bottom: 4px;
+}
+.outlook{
+    text-decoration:underline;
+    padding-bottom: 4px;
+}
