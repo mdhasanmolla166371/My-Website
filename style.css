@@ -448,6 +448,59 @@ header{
    background-color: #00a151;
 }
 
+/* whatsapp button */
+
+ .whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.logo-btn a {
+    display: flex;
+    flex-direction: row-reverse; 
+    align-items: center;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    height: 70px;
+    width: 70px; 
+    border-radius: 50px;
+    overflow: hidden;
+    transition:  0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    position: relative;
+}
+
+.logo-btn i {
+    font-size: 45px;
+    min-width: 70px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-btn span {
+    font-size: 22px;
+    padding-left: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease 0.4s, visibility 0.3s ease 0.4s; 
+}
+
+.logo-btn a:hover {
+    width: 230px; 
+    background-color: #17a049;
+}
+
+.logo-btn a:hover span {
+    opacity: 1;
+    visibility: visible;
+}
+
+
 
 /* Footer section */
 
